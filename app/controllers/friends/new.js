@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
           this.transitionToRoute('friends.show', friend);
         });
       }else {
-        this.set('errorMessage', 'You haev to fill in all the fields');
+        this.set('errorMessage', 'You have to fill in all the fields');
       }
       // Stops from bubbling
       return false;
