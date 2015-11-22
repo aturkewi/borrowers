@@ -7,6 +7,26 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  // Import fontello fonts and CSS.
+  // Downloaded from: cl.ly/3y1W1B3Y4028
+  app.import('vendor/fontello/fontello.css');
+  app.import('vendor/fontello/font/fontello.ttf',{
+    destDir: 'font'
+  })
+  app.import('vendor/fontello/font/fontello.eot',{
+    destDir: 'font'
+  })
+  app.import('vendor/fontello/font/fontello.svg',{
+    destDir: 'font'
+  })
+  app.import('vendor/fontello/font/fontello.woff',{
+    destDir: 'font'
+  })
+
+  // Picnicss installed from bower and imported here:
+  app.import('bower_components/picnic/releases/plugins.min.css');
+  app.import('bower_components/picnic/releases/picnic.min.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
