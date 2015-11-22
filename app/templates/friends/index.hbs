@@ -4,11 +4,17 @@
 
 <h2>Total friends: {{model.length}}</h2>
 
-<ul>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
   {{#each model as |friend|}}
-    <li>
-      {{link-to friend.fullName 'friends.show' friend}}
-    </li>
+  <tr>
+    <td>{{link-to friend.fullName "friends.show" friend}}</td>
+    <td><a href="#" {{action "delete" friend}} >Delete</a></td>
+  </tr>
   {{/each}}
-</ul>
-{{link-to 'Back' 'index'}}
+</table>
